@@ -8,6 +8,9 @@ inches_entry.pack(pady=10)
 def inches_to_cm(inches):
     return inches*2.54
 def show_result():
-    inches=inches_entry.get()
+    inches=float(inches_entry.get())
     result=inches_to_cm(inches)
-    messagebox.showinfo("Result",)
+    messagebox.showinfo("Result",str(result)+" cm")
+btn=Button(window,text="Convert",command=show_result)
+btn.pack(pady=10)
+window.mainloop()
